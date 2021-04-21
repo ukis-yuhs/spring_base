@@ -1,14 +1,7 @@
 package org.example.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-
 import java.util.Date;
 
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class SysRoleUser {
     private Integer id;
 

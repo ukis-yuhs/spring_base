@@ -1,45 +1,32 @@
 package org.example.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
-
 import java.util.Date;
 
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
 public class SysUser {
-    private Integer id;
+    private Long userId;
 
     private String username;
 
-    private String telephone;
-
-    private String mail;
-
     private String password;
 
-    private Integer deptId;
+    private String salt;
 
-    private Integer status;
+    private String email;
 
-    private String remark;
+    private String mobile;
 
-    private String operator;
+    private Byte status;
 
-    private Date operateTime;
+    private Long createUserId;
 
-    private String operateIp;
+    private Date createTime;
 
-    public Integer getId() {
-        return id;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getUsername() {
@@ -50,22 +37,6 @@ public class SysUser {
         this.username = username == null ? null : username.trim();
     }
 
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone == null ? null : telephone.trim();
-    }
-
-    public String getMail() {
-        return mail;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail == null ? null : mail.trim();
-    }
-
     public String getPassword() {
         return password;
     }
@@ -74,51 +45,51 @@ public class SysUser {
         this.password = password == null ? null : password.trim();
     }
 
-    public Integer getDeptId() {
-        return deptId;
+    public String getSalt() {
+        return salt;
     }
 
-    public void setDeptId(Integer deptId) {
-        this.deptId = deptId;
+    public void setSalt(String salt) {
+        this.salt = salt == null ? null : salt.trim();
     }
 
-    public Integer getStatus() {
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email == null ? null : email.trim();
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile == null ? null : mobile.trim();
+    }
+
+    public Byte getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(Byte status) {
         this.status = status;
     }
 
-    public String getRemark() {
-        return remark;
+    public Long getCreateUserId() {
+        return createUserId;
     }
 
-    public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
+    public void setCreateUserId(Long createUserId) {
+        this.createUserId = createUserId;
     }
 
-    public String getOperator() {
-        return operator;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setOperator(String operator) {
-        this.operator = operator == null ? null : operator.trim();
-    }
-
-    public Date getOperateTime() {
-        return operateTime;
-    }
-
-    public void setOperateTime(Date operateTime) {
-        this.operateTime = operateTime;
-    }
-
-    public String getOperateIp() {
-        return operateIp;
-    }
-
-    public void setOperateIp(String operateIp) {
-        this.operateIp = operateIp == null ? null : operateIp.trim();
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }
