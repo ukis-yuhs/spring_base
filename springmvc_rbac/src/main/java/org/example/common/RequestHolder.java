@@ -2,6 +2,8 @@ package org.example.common;
 
 
 
+import org.example.model.SysUser;
+
 import javax.servlet.http.HttpServletRequest;
 
 public class RequestHolder {
