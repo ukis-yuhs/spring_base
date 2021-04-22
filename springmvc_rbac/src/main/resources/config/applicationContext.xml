@@ -20,7 +20,7 @@
     </property>
   </bean>
   <!-- redis-->
-<!--  <import resource="redisConfig.xml" />-->
+  <import resource="redisConfig.xml" />
 
   <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
     <property name="driverClassName" value="${db.driverClassName}" />
@@ -41,7 +41,7 @@
   </bean>
 
   <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-    <property name="basePackage" value="com.mmall.dao" />
+    <property name="basePackage" value="org.example.dao" />
     <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
   </bean>
 
