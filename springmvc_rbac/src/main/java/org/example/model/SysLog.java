@@ -1,85 +1,82 @@
 package org.example.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
 import java.util.Date;
 
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class SysLog {
-    private Long id;
+    private Integer id;
 
-    private String username;
+    private Integer type;
 
-    private String operation;
+    private Integer targetId;
 
-    private String method;
+    private String operator;
 
-    private String params;
+    private Date operateTime;
 
-    private Long time;
+    private String operateIp;
 
-    private String ip;
+    private Integer status;
 
-    private Date createDate;
-
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public Integer getType() {
+        return type;
     }
 
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
+    public void setType(Integer type) {
+        this.type = type;
     }
 
-    public String getOperation() {
-        return operation;
+    public Integer getTargetId() {
+        return targetId;
     }
 
-    public void setOperation(String operation) {
-        this.operation = operation == null ? null : operation.trim();
+    public void setTargetId(Integer targetId) {
+        this.targetId = targetId;
     }
 
-    public String getMethod() {
-        return method;
+    public String getOperator() {
+        return operator;
     }
 
-    public void setMethod(String method) {
-        this.method = method == null ? null : method.trim();
+    public void setOperator(String operator) {
+        this.operator = operator == null ? null : operator.trim();
     }
 
-    public String getParams() {
-        return params;
+    public Date getOperateTime() {
+        return operateTime;
     }
 
-    public void setParams(String params) {
-        this.params = params == null ? null : params.trim();
+    public void setOperateTime(Date operateTime) {
+        this.operateTime = operateTime;
     }
 
-    public Long getTime() {
-        return time;
+    public String getOperateIp() {
+        return operateIp;
     }
 
-    public void setTime(Long time) {
-        this.time = time;
+    public void setOperateIp(String operateIp) {
+        this.operateIp = operateIp == null ? null : operateIp.trim();
     }
 
-    public String getIp() {
-        return ip;
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setIp(String ip) {
-        this.ip = ip == null ? null : ip.trim();
-    }
-
-    public Date getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

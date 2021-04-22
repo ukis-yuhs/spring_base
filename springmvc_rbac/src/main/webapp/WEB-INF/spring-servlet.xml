@@ -15,7 +15,7 @@
     <mvc:annotation-driven/>
 
     <mvc:interceptors>
-        <bean class="org.example.common.HttpInterceptor" />
+        <bean class="org.example.Interceptor.HttpInterceptor" />
     </mvc:interceptors>
 
     <!-- 启动包扫描功能 -->
